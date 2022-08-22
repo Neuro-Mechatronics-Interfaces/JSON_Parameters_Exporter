@@ -22,3 +22,5 @@ DEFAULT_LAYOUTS_DIR = path.join(ROOT_DIR, "default_layouts")
 DEFAULT_PARAMETERS_DIR = path.join(ROOT_DIR, "default_parameters")
 DEFAULT_PARAMETERS_FILE = "params_Spencer-MID.json";
 SAVED_PARAMETERS_DIR = path.join(ROOT_DIR, "saved_parameters")
+WEBSOCKET_IP = "128.2.244.29"
+WEBSOCKET_PORT = 6789

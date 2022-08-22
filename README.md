@@ -26,6 +26,8 @@ The following packages must be included in the `Python` environment (i.e. instal
     * `tinycss2` (^1.1.0)
     * `webencodings` (^0.5.1)
 * `pycairo` (^1.20.0)
+* `websockets` (^10.3)
+* `asyncio` (^3.4.3)
 
 ### Interface ###
 

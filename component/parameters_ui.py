@@ -11,9 +11,9 @@ Authors:
     - Jonathan Shulgach
     - Max Murphy
 """
-import json
+import asyncio, json, websockets
 from time import strftime
-from definitions import DEFAULT_PARAMETERS_DIR, DEFAULT_PARAMETERS_FILE, DEFAULT_LAYOUTS_DIR, SAVED_PARAMETERS_DIR
+from definitions import DEFAULT_PARAMETERS_DIR, DEFAULT_PARAMETERS_FILE, DEFAULT_LAYOUTS_DIR, SAVED_PARAMETERS_DIR, WEBSOCKET_IP, WEBSOCKET_PORT
 from pymitter import EventEmitter
 from tkinter import N, S, E, W, StringVar, PhotoImage, messagebox
 from tkinter.filedialog import askdirectory, askopenfile, askopenfilename
@@ -21,6 +21,11 @@ from component.arg_formats import arrayType, tagsType
 from component.widgets import VALID_TYPES, parse_widget, raise_type_error
 from component.utilities import add_image_button, check_for_file, get_photo_image, json_array_2_params_property
 from component.interfaces import ParentWindow, Pane, Page, app, myDecorations
+
+
+def ws_uri() -> str:
+    """Returns the URI for websocket given IP and port in definitions.py."""
+    return f"ws://{WEBSOCKET_IP}:{WEBSOCKET_PORT}"
 
 
 class TypedParameterPage(Page):
@@ -276,11 +281,25 @@ class ParametersParentWindow(ParentWindow):
         
         self.task = self._parameters['Task']['Value']
         self._loadLayout(self._parameters, **kwargs)
+        asyncio.get_event_loop().run_until_complete(self.updatePServerTask())
+
+    async def updatePServerParameters(self):
+        """Update the parameter server with new parameter object values."""
+        uri = ws_uri()
+        async with websockets.connect(uri) as websocket:
+            await websocket.send(json.dumps({'type': 'set_parameters', 'parameters': json.dumps(self._parameters)}))
+            
+    async def updatePServerTask(self):
+        """Update the parameter server with new task name."""
+        uri = ws_uri()
+        async with websockets.connect(uri) as websocket:
+            await websocket.send(json.dumps({'type': 'set_task', 'task': self.task}))
 
     def updateParameter(self, p):
         """Callback for updating a given parameter based on widget changes."""
-        print("Updated {0} to {1}.".format(p['Name'], p['Value']))
+        # print("Updated {0} to {1}.".format(p['Name'], p['Value']))
         self._parameters[p['Name']]['Value'] = p['Value']
+        asyncio.get_event_loop().run_until_complete(self.updatePServerParameters())
 
     def pageIndex(self, page) -> int:
         """Return index of page in self.pgs array (or None if not in array).
@@ -329,7 +348,7 @@ class ParametersParentWindow(ParentWindow):
         self._parameters = parameters
         self._loadLayout(parameters)
         for p in self.pgs:
-            print(f'Loading {p.title} parameters...')
+            # print(f'Loading {p.title} parameters...')
             p.loadParameters(parameters)
         print("Loading complete!")
         
