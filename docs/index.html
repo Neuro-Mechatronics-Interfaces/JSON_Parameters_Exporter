@@ -56,7 +56,7 @@
                 plus = document.querySelector('.plus'),
                 minus = document.querySelector('.minus'), 
                 task = document.querySelector('.task'), 
-                websocket = new WebSocket("ws://127.0.0.1:6789/");
+                websocket = new WebSocket("ws://128.2.244.29:6789/");
             plus.onclick = function (event) {
                 websocket.send(JSON.stringify({type: 'set_parameters', parameters: JSON.stringify({param1: 'A', param2: 5})}));
             }
