@@ -1,0 +1,51 @@
+{"pages":
+  [
+    {
+      "title": "Targeting",
+      "subtitle": "Spatial Targeting and Visualization",
+      "n_per_column": 3,
+      "p_type": [
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Timing",
+      "subtitle": "Stimulation Waveform Parameters",
+      "n_per_column": 2,
+      "p_type": [
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Sync",
+      "subtitle": "Stimulation Triggers and I/O",
+      "n_per_column": 2,
+      "p_type": [
+        "Scalar",
+        "Dropdown",
+        "Label",
+        "Boolean"
+      ]
+    },
+    {
+      "title": "Monitor",
+      "subtitle": "Settings for Temperature and Other Monitors",
+      "n_per_column": 4,
+      "p_type": [
+        "Label",
+        "Scalar", 
+        "Boolean"
+      ]
+    },
+	{
+      "title": "Other",
+      "subtitle": "Other Miscellaneous Parameters",
+      "n_per_column": 4,
+      "p_type": [
+        "Label",
+        "Scalar", 
+        "Boolean"
+      ]
+    }
+  ]
+}

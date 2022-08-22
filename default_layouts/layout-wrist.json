@@ -1,0 +1,95 @@
+{"pages":
+  [
+    {
+      "title": "Meta-Parameters",
+      "subtitle": "Subject/Task Info",
+      "n_per_column": 2,
+      "p_type": [
+        "Dropdown"
+      ]
+    },
+    {
+      "title": "Important Parameters",
+      "subtitle": "Main Options",
+      "n_per_column": 2,
+      "p_type": [
+        "Scalar",
+        "Dropdown",
+        "Label",
+        "Boolean"
+      ]
+    },
+    {
+      "title": "Task Parameters",
+      "subtitle": "Task Options",
+      "n_per_column": 3,
+      "p_type": [
+        "Array", 
+        "Dropdown", 
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Analog Channels",
+      "subtitle": "Data Channel Info",
+      "n_per_column": 5,
+      "p_type": [
+        "Label",
+        "Scalar", 
+        "Boolean"
+      ]
+    },
+    {
+      "title": "Size Parameters",
+      "subtitle": "Size/Scale Info",
+      "n_per_column": 2,
+      "p_type":  [
+        "Scalar",
+        "Array"
+      ]
+    },
+    {
+      "title": "Debug Parameters",
+      "subtitle": "Debugging Options",
+      "n_per_column": 3,
+      "p_type":  [
+        "Boolean",
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Miscellaneous Parameters",
+      "subtitle": "Miscellaneous Options",
+      "n_per_column": 3,
+      "p_type":  [
+        "Label",
+        "Tags",
+        "Boolean",
+        "Dropdown",
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Color Parameters",
+      "subtitle": "Target Color Options",
+      "n_per_column": 2, 
+      "p_type":  [
+        "Label",
+        "Tags",
+        "Boolean",
+        "Dropdown",
+        "Scalar"
+      ]
+    },
+    {
+      "title": "Haptics Parameters",
+      "subtitle": "Vibrating Buzzer Options",
+      "n_per_column": 2, 
+      "p_type":  [
+        "Array", 
+        "Boolean",
+        "Scalar"
+      ]
+    }
+  ]
+}

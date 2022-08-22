@@ -1,0 +1,29 @@
+{"pages":
+  [
+    {
+      "title": "Parameters",
+      "subtitle": "params.json",
+      "n_per_column": 2,
+      "p_type": [
+        "Boolean",
+        "Scalar",
+        "Label",
+        "Dropdown",
+        "Array",
+        "Tags",
+        "DropdownTags"
+      ]
+    },
+    {
+      "title": "Layouts",
+      "subtitle": "layout.json",
+      "n_per_column": 2,
+      "p_type": [
+        "Scalar",
+        "Dropdown",
+        "Label",
+        "Boolean"
+      ]
+    }
+  ]
+}

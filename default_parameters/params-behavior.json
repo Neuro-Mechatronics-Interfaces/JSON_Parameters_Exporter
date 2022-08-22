@@ -1,0 +1,1201 @@
+{
+  "parameters": [
+    {
+      "Type": "Dropdown",
+      "Page": "Meta-Parameters",
+      "Name": "Subject",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "Spencer",
+      "Options": [
+        "Spencer",
+        "Rupert"
+      ],
+      "Description": "Name of the experimental subject.",
+      "PageIndex": 0
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Meta-Parameters",
+      "Name": "Mode",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "PRACTICE",
+      "Options": [
+        "PRACTICE",
+        "TEST",
+        "EXPERIMENT"
+      ],
+      "Description": "Acquisition mode indicator.",
+      "PageIndex": 0
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Meta-Parameters",
+      "Name": "Task",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "STANDARD",
+      "Options": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Description": "Name of task.",
+      "PageIndex": 0
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Meta-Parameters",
+      "Name": "Tag",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "20deg-M-P-S",
+      "Options": [
+        "20deg-M-P-S",
+        "20deg-M",
+        "20deg-P",
+        "20deg-S",
+        "Other"
+      ],
+      "Description": "Tag denoting something specific to the experiment or setup.",
+      "PageIndex": 0
+    },
+    {
+      "Type": "Tags",
+      "Page": "Miscellaneous Parameters",
+      "Name": "Naming Variables",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": [
+        "Subject",
+        "Mode",
+        "Task",
+        "Tag"
+      ],
+      "Description": "Parameters to auto-populate recording file name. \nName auto-starts ISO-8601 date, ends with index.",
+      "PageIndex": 7
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Trials",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 100,
+      "Bounds": [
+        20,
+        1000
+      ],
+      "Increment": 20,
+      "Description": "Total number of trials for this recording session.",
+      "Units": "trials",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Cursor Size",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 10.0,
+      "Bounds": [
+        5,
+        20
+      ],
+      "Increment": 1,
+      "Description": "Radius of cursor circle (hit-box).",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Cursor Line Width",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0.0,
+        5.0
+      ],
+      "Increment": 1.0,
+      "Description": "Width of cursor edges.",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Target Size",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 45.0,
+      "Bounds": [
+        30.0,
+        90.0
+      ],
+      "Increment": 5.0,
+      "Description": "Radius of targets (hit-box).",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Target Line Width",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0.0,
+        10.0
+      ],
+      "Increment": 1.0,
+      "Description": "Width of target edges.",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Outer Target Circle Radius",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 300.0,
+      "Bounds": [
+        100.0,
+        500.0
+      ],
+      "Increment": 10,
+      "Description": "Radius of ring denoting outer target centers.",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Miscellaneous Parameters",
+      "Name": "N Outer Targets",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 36,
+      "Bounds": [
+        1,
+        360
+      ],
+      "Increment": 1,
+      "Description": "Number of evenly spaced random positions along the marker placement circle the outer marker can take.",
+      "Units": "",
+      "PageIndex": 7
+    },    
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Monitor Width",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 47.0,
+      "Bounds": [
+        20.0,
+        100.0
+      ],
+      "Increment": 0.05,
+      "Description": "Millimeters from inner left edge of monitor screen to inner right edge of monitor screen.",
+      "Units": "mm",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Monitor X Pixels",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 1680,
+      "Bounds": [
+        480,
+        3200
+      ],
+      "Increment": 1,
+      "Description": "Number of pixels from inner left edge of monitor screen to inner right edge of monitor screen.",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Monitor Height",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 30.0,
+      "Bounds": [
+        20.0,
+        100.0
+      ],
+      "Increment": 0.05,
+      "Description": "Millimeters from inner bottom edge of monitor screen to inner top edge of monitor screen.",
+      "Units": "mm",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Size Parameters",
+      "Name": "Monitor Y Pixels",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 1050,
+      "Bounds": [
+        480,
+        3200
+      ],
+      "Increment": 1,
+      "Description": "Number of pixels from inner bottom edge of monitor screen to inner top edge of monitor screen.",
+      "Units": "pixels",
+      "PageIndex": 5
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Fixed PRE Limit",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 4.0,
+      "Bounds": [
+        1.0,
+        60.0
+      ],
+      "Increment": 0.5,
+      "Description": "Number of seconds to reach the initial target.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Min PREPARE Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.150,
+      "Bounds": [
+        0.025,
+        0.500
+      ],
+      "Increment": 0.005, 
+      "Description": "Minimum number of seconds required to HOLD initial target BEFORE being shown the second target.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Max PREPARE Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.300,
+      "Bounds": [
+        0.050,
+        2.0
+      ],
+      "Increment": 0.005,
+      "Description": "Maximum number of seconds required to HOLD initial target BEFORE being shown the second target.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Min READY Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.150,
+      "Bounds": [
+        0.050,
+        0.500
+      ],
+      "Increment": 0.005,
+      "Description": "Minimum number of seconds required to HOLD initial target AFTER being shown the second target.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Max READY Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.300,
+      "Bounds": [
+        0.050,
+        2.000
+      ],
+      "Increment": 0.005,
+      "Description": "Maximum number of seconds required to HOLD initial target AFTER being shown the second target.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Min INTERTRIAL Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0.000,
+        30.00
+      ],
+      "Increment": 0.250,
+      "Description": "Minimum number of seconds between trials.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Max INTERTRIAL Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.000,
+      "Bounds": [
+        0.000,
+        60.00
+      ],
+      "Increment": 0.250,
+      "Description": "Maximum number of seconds between trials.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "Fixed MOVE Limit",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 1.500,
+      "Bounds": [
+        0.100,
+        2.000
+      ],
+      "Increment": 0.005,
+      "Description": "Maximum number of seconds allowed to complete MOVE phase.",
+      "Units": "s",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Fixed OVERSHOOT Limit",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 1.000,
+      "Bounds": [
+        0.100,
+        2.000
+      ],
+      "Increment": 0.005,
+      "Description": "Maximum number of seconds allowed to complete OVERSHOOT phase.",
+      "Units": "s",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Fixed HIT Limit",
+      "Value": 0.500,
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Bounds": [
+        0.010,
+        1.500
+      ],
+      "Increment": 0.010,
+      "Description": "Number of seconds required for the HIT phase to complete.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Fixed REWARD Delay",
+      "Value": 0.500,
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Bounds": [
+        0.000,
+        3.000
+      ],
+      "Increment": 0.100,
+      "Description": "Number of seconds to delay between task SUCCESS and delivery of the reward.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "Fixed OFFSET Delay",
+      "Value": 0.030,
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Bounds": [
+        0.000,
+        0.300
+      ],
+      "Increment": 0.001,
+      "Description": "Number of seconds lag from graphics delay (calibrated).",
+      "Units": "s",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Move Threshold",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 40.0,
+      "Bounds": [
+        20,
+        60
+      ],
+      "Increment": 1,
+      "Description": "Threshold to trigger movement detection.",
+      "Units": "|deg/s|",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Min REWARD Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.15,
+      "Bounds": [
+        0.1,
+        1.5
+      ],
+      "Increment": 0.05,
+      "Description": "Minimum number of seconds to signal HIGH on liquid dispense for the reward.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Max REWARD Time",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.50,
+      "Bounds": [
+        0.25,
+        1.5
+      ],
+      "Increment": 0.05,
+      "Description": "Maximum number of seconds to signal HIGH on liquid dispense for the reward.",
+      "Units": "s",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Miscellaneous Parameters",
+      "Name": "Max Fail Sequence",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 5.0,
+      "Bounds": [
+        3,
+        10
+      ],
+      "Increment": 1,
+      "Description": "Number of consecutive failed trials before a short timeout debounce begins.",
+      "Units": "trials",
+      "PageIndex": 7
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Miscellaneous Parameters",
+      "Name": "Fail Sequence Timeout",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 10.0,
+      "Bounds": [
+        5,
+        60
+      ],
+      "Increment": 5,
+      "Description": "Duration of timeout that occurs after a certain number of consecutive failed attempts.",
+      "Units": "s",
+      "PageIndex": 7
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "X POSITION Gain",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 62.5,
+      "Bounds": [
+        0,
+        300
+      ],
+      "Increment": 0.5,
+      "Description": "Gain relating the cursor movement to the analog joystick x-position signal.",
+      "Units": "%",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "Y POSITION Gain",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 100.0,
+      "Bounds": [
+        0,
+        300
+      ],
+      "Increment": 0.5,
+      "Description": "Gain relating the cursor movement to the analog joystick y-position signal.",
+      "Units": "%",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "X SPEED Gain",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0,
+        300
+      ],
+      "Increment": 0.5,
+      "Description": "Gain relating the cursor movement to the analog joystick x-speed signal.",
+      "Units": "%",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Important Parameters",
+      "Name": "Y SPEED Gain",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0,
+        300
+      ],
+      "Increment": 0.5,
+      "Description": "Gain relating the cursor movement to the analog joystick y-speed signal.",
+      "Units": "%",
+      "PageIndex": 1
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Color Parameters",
+      "Name": "Target Base Color",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "blue",
+      "Options": [
+        "blue",
+        "white",
+        "yellow", 
+        "cyan",
+        "green", 
+        "red", 
+        "magenta", 
+        "orange"
+      ],
+      "Description": "Target BASE color.",
+      "PageIndex": 8
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Color Parameters",
+      "Name": "Target Hold Color",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "yellow",
+      "Options": [
+        "blue",
+        "white",
+        "yellow", 
+        "cyan",
+        "green", 
+        "red", 
+        "magenta", 
+        "orange"
+      ],
+      "Description": "Target HOLD color.",
+      "PageIndex": 8
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Color Parameters",
+      "Name": "Target Error Color",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "red",
+      "Options": [
+        "blue",
+        "white",
+        "yellow", 
+        "cyan",
+        "green", 
+        "red", 
+        "magenta", 
+        "orange"
+      ],
+      "Description": "Target ERROR color.",
+      "PageIndex": 8
+    },
+    {
+      "Type": "Dropdown",
+      "Page": "Color Parameters",
+      "Name": "Target Success Color",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "green",
+      "Options": [
+        "blue",
+        "white",
+        "yellow", 
+        "cyan",
+        "green", 
+        "red", 
+        "magenta", 
+        "orange"
+      ],
+      "Description": "Target SUCCESS color.",
+      "PageIndex": 8
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Color Parameters",
+      "Name": "Color Markers",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": false,
+      "Description": "Enable colors of the markers.",
+      "PageIndex": 8
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Debug Parameters",
+      "Name": "Verbose Output",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 1,
+      "Bounds": [
+        0,
+        3
+      ],
+      "Increment": 1,
+      "Description": "Verbose output level. 0 = No Debug Prints. 1 = Main Debug Statements. 2 = Detailed Debug Statements. 3 = All Debug Statements.",
+      "Units": "levels",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Virtual Mode",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": false,
+      "Description": "Enable simulated mode without needing raspberry pi.",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Enable LED",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": false,
+      "Description": "Checked box indicates whether to flash debug LEDs with trials (causes Arduino beeping as well).",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Enable Sound",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Checked box indicates whether to play melodies during trials.",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Cursor Override",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": false,
+      "Description": "Allow control override of cursor with mouse instead of analog channel inputs.",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Reward Dispenser",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Checked box indicates reward delivered on successful trial completion.",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Debug Parameters",
+      "Name": "Save Data",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": false,
+      "Description": "Check box to save data from trials.",
+      "PageIndex": 6
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Analog Channels",
+      "Name": "Analog 1",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable Analog-1 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Label",
+      "Page": "Analog Channels",
+      "Name": "Analog 1 Name",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "X POSITION",
+      "Description": "Name of task dimension controlled by Analog-1 Input.",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 1 Min",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Minimum value of signal connected to Analog-1 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 1 Max",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 63552,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Maximum value of signal connected to Analog-1 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Analog Channels",
+      "Name": "Analog 2",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable Analog-2 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Label",
+      "Page": "Analog Channels",
+      "Name": "Analog 2 Name",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "Y POSITION",
+      "Description": "Name of task dimension controlled by Analog-2 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 2 Min",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Minimum value of signal connected to Analog-2 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 2 Max",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 63552,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Maximum value of signal connected to Analog-2 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Analog Channels",
+      "Name": "Analog 3",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable Analog-3 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Label",
+      "Page": "Analog Channels",
+      "Name": "Analog 3 Name",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "X SPEED",
+      "Description": "Name of task dimension controlled by Analog-3 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 3 Min",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Minimum value of signal connected to Analog-3 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 3 Max",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 65472,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Maximum value of signal connected to Analog-3 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Boolean",
+      "Page": "Analog Channels",
+      "Name": "Analog 4",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable Analog-4 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Label",
+      "Page": "Analog Channels",
+      "Name": "Analog 4 Name",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "Y SPEED",
+      "Description": "Name of task dimension controlled by Analog-4 Input",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 4 Min",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 0,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Minimum value of signal connected to Analog-4 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Analog Channels",
+      "Name": "Analog 4 Max",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 65472,
+      "Bounds": [
+        0,
+        65472
+      ],
+      "Increment": 1,
+      "Description": "Maximum value of signal connected to Analog-4 Input.",
+      "Units": "bits",
+      "PageIndex": 3
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Analog Input Limit",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 65472.0,
+      "Bounds": [
+        0,
+        100000
+      ],
+      "Increment": 1,
+      "Description": "hardware-dependent analog input value interpreted from voltage input",
+      "Units": "bits",
+      "PageIndex": 2
+    },
+    {
+      "Type": "Scalar",
+      "Page": "Task Parameters",
+      "Name": "Smooth Cursor Sample",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": 4.0,
+      "Bounds": [
+        0,
+        100
+      ],
+      "Increment": 1,
+      "Description": "The sample size of cursor positions taken to compute and return the average position.",
+      "Units": "Samples",
+      "PageIndex": 2
+    }
+  ],
+  "icon": "assets/CMU_Tartans.png",
+  "layout": "default_layouts/layout-behavior.json"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "default",
+  "date": "2021-04-04",
+  "task": "STANDARD",
+  "subject": "None",
+  "parameters": {
+    "Subject": {
+      "Type": "Dropdown",
+      "Page": "Parameters",
+      "Name": "Subject",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Rupert",
+      "Options": [
+        "Spencer",
+        "Rupert"
+      ],
+      "Description": "Name of the experimental subject."
+    },
+    "Task": {
+      "Type": "Dropdown",
+      "Page": "Parameters",
+      "Name": "Subject",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "STANDARD",
+      "Options": [
+        "STANDARD"
+      ],
+      "Description": "Which task"
+    }
+  },
+  "layout": "default_layouts/layout-example.json",
+  "icon": "assets/CMU_Tartans"
+}

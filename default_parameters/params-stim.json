@@ -1,0 +1,304 @@
+{
+  "name": "default",
+  "date": "2021-07-30",
+  "task": "STANDARD",
+  "subject": "None",
+  "parameters": {
+    "X": {
+      "Type": "Scalar",
+      "Page": "Targeting",
+      "Name": "X",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        -5.0,
+        5.0
+      ],
+      "Increment": 0.1,
+      "Description": "X-coordinate (medio-lateral dimension) of stimulation focus.",
+      "Units": "mm",
+      "PageIndex": 0
+    },
+	"Y": {
+      "Type": "Scalar",
+      "Page": "Targeting",
+      "Name": "Y",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        -5.0,
+        5.0
+      ],
+      "Increment": 0.1,
+      "Description": "Y-coordinate (antero-posterior dimension) at center of activation region.",
+      "Units": "mm",
+      "PageIndex": 0
+    },
+	"Z": {
+      "Type": "Scalar",
+      "Page": "Targeting",
+      "Name": "Y",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0.0,
+        2.0
+      ],
+      "Increment": 0.1,
+      "Description": "Z-coordinate (dorso-ventral dimension) of tip of activation region.",
+      "Units": "mm",
+      "PageIndex": 0
+    },
+	"Amplitude": {
+      "Type": "Scalar",
+      "Page": "Targeting",
+      "Name": "Amplitude",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 0.0,
+      "Bounds": [
+        0.0,
+        10.0
+      ],
+      "Increment": 0.1,
+      "Description": "Equivalent ICMS current stimulation amplitude (TBD?)",
+      "Units": "uV",
+      "PageIndex": 0
+    },
+	"Burst Period": {
+      "Type": "Scalar",
+      "Page": "Timing",
+      "Name": "Burst Period",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 1.0,
+      "Bounds": [
+        0.0,
+        10.0
+      ],
+      "Increment": 0.001,
+      "Description": "The total time from onset (rising edge) of one burst to the onset of the next burst.",
+      "Units": "s",
+      "PageIndex": 1
+    },
+	"Burst Duration": {
+      "Type": "Scalar",
+      "Page": "Timing",
+      "Name": "Burst Duration",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 10.0,
+      "Bounds": [
+        0.0,
+        500.0
+      ],
+      "Increment": 1.0,
+      "Description": "The total duration of a single burst of pulses (time from burst rising edge to burst falling edge). Burst gates the pulses.",
+      "Units": "ms",
+      "PageIndex": 1
+    },
+	"Pulse Period": {
+      "Type": "Scalar",
+      "Page": "Timing",
+      "Name": "Pulse Period",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 1.0,
+      "Bounds": [
+        0.0,
+        10.0
+      ],
+      "Increment": 0.1,
+      "Description": "The time from onset (rising edge) of one pulse to the next pulse onset.",
+      "Units": "ms",
+      "PageIndex": 1
+    },
+	"Pulse Duration": {
+      "Type": "Scalar",
+      "Page": "Timing",
+      "Name": "Pulse Duration",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 0.5,
+      "Bounds": [
+        0.0,
+        10.0
+      ],
+      "Increment": 0.1,
+      "Description": "The time from onset (rising edge) of one pulse to its end (falling edge).",
+      "Units": "ms",
+      "PageIndex": 1
+    },
+	"Bursts Per Trigger": {
+      "Type": "Scalar",
+      "Page": "Timing",
+      "Name": "Bursts Per Trigger",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": 10,
+      "Bounds": [
+        0,
+        120
+      ],
+      "Increment": 1,
+      "Description": "Total number of bursts evoked by a stimulation trigger.",
+      "Units": "ms",
+      "PageIndex": 1
+    },
+	"Trigger 1": {
+      "Type": "Boolean",
+      "Page": "Sync",
+      "Name": "Trigger 1",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable bursts caused by Trigger-1.",
+      "PageIndex": 2
+    },
+    "Trigger 1 XML": {
+      "Type": "Label",
+      "Page": "Sync",
+      "Name": "Trigger 1 XML",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Trig-1.xml",
+      "Description": "Name of XML file with parameters related to Trigger-1 input.",
+      "PageIndex": 2
+    },
+	"Trigger 2": {
+      "Type": "Boolean",
+      "Page": "Sync",
+      "Name": "Trigger 2",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable bursts caused by Trigger-2.",
+      "PageIndex": 2
+    },
+    "Trigger 2 XML": {
+      "Type": "Label",
+      "Page": "Sync",
+      "Name": "Trigger 2 XML",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Trig-2.xml",
+      "Description": "Name of XML file with parameters related to Trigger-2 input.",
+      "PageIndex": 2
+    },
+	"Trigger 3": {
+      "Type": "Boolean",
+      "Page": "Sync",
+      "Name": "Trigger 3",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable bursts caused by Trigger-3.",
+      "PageIndex": 2
+    },
+    "Trigger 3 XML": {
+      "Type": "Label",
+      "Page": "Sync",
+      "Name": "Trigger 3 XML",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Trig-3.xml",
+      "Description": "Name of XML file with parameters related to Trigger-3 input.",
+      "PageIndex": 2
+    },
+	"Trigger 4": {
+      "Type": "Boolean",
+      "Page": "Sync",
+      "Name": "Trigger 4",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable bursts caused by Trigger-4.",
+      "PageIndex": 2
+    },
+    "Trigger 4 XML": {
+      "Type": "Label",
+      "Page": "Sync",
+      "Name": "Trigger 4 XML",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Trig-4.xml",
+      "Description": "Name of XML file with parameters related to Trigger-4 input.",
+      "PageIndex": 2
+    },
+	"Trigger 5": {
+      "Type": "Boolean",
+      "Page": "Sync",
+      "Name": "Trigger 5",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": true,
+      "Description": "Tick the checkbox to enable bursts caused by Trigger-5.",
+      "PageIndex": 2
+    },
+    "Trigger 5 XML": {
+      "Type": "Label",
+      "Page": "Sync",
+      "Name": "Trigger 5 XML",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "Trig-5.xml",
+      "Description": "Name of XML file with parameters related to Trigger-5 input.",
+      "PageIndex": 2
+    },
+	"Subject": {
+      "Type": "Dropdown",
+      "Page": "Other",
+      "Name": "Subject",
+      "Task": [
+        "STANDARD",
+        "VMR",
+        "STIMULATION"
+      ],
+      "Value": "Spencer",
+      "Options": [
+        "Spencer",
+        "Rupert"
+      ],
+      "Description": "Name of the experimental subject.",
+      "PageIndex": 4
+    },
+    "Task": {
+      "Type": "Dropdown",
+      "Page": "Other",
+      "Name": "Subject",
+      "Task": [
+        "STANDARD"
+      ],
+      "Value": "STANDARD",
+      "Options": [
+        "STANDARD"
+      ],
+      "Description": "Which task",
+	  "PageIndex": 4
+    }
+  },
+  "layout": "default_layouts/layout-stim.json",
+  "icon": "assets/CMU_Tartans"
+}
