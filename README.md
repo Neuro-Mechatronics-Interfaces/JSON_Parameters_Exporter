@@ -35,6 +35,7 @@ Main interface is accessed by running `main.py`.
 
 ## Use ##
 
+### Standalone Version ###
 1. Run `main.py`
 2. Load `params-stim.json` from the user prompt.
    * The `params` file specifies the associated `layout.yaml` file that defines tabs.
@@ -42,3 +43,9 @@ Main interface is accessed by running `main.py`.
 3. Make changes to parameters as desired.
 4. Click `save`. The filename is automatically generated based on a schema that I'd been using for collecting behavioral parameter metadata, but this could be adapted to suit an export for a `configuration.xml` output (and the `saveParameters` method of `component.ParametersUI.py` would be adjusted according to the `xml` specifications).
 
+### Networked Version ###
+1. Open a terminal in this repo.
+2. In that terminal, run `python server.py`
+3. Open a second terminal in this repo.
+4. In that terminal, run `python main.py`
+5. (Optional demo): In `docs`, open `index.html`. When you change any parameter in the `main.py` application, it should update the JSON string in the web interface via the server update.

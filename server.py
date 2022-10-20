@@ -63,8 +63,8 @@ async def unregister(websocket):
 
 async def serve_parameters(websocket, path):
     # register(websocket) sends user_event() to websocket
-    await register(websocket)
     try:
+        await register(websocket)
         async for message in websocket:
             data = json.loads(message)
             print(data)
@@ -74,11 +74,13 @@ async def serve_parameters(websocket, path):
             elif data["type"] == "set_task":
                 STATE["task"] = data["task"]
                 await notify_task()
+    except Exception:
+        print("Websocket connection closed.")
     finally:
         await unregister(websocket)
 
 
 start_server = websockets.serve(serve_parameters, WEBSOCKET_IP, WEBSOCKET_PORT)
-
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_server)
+loop.run_forever()

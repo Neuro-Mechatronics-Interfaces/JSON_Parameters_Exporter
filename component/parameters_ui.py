@@ -287,7 +287,7 @@ class ParametersParentWindow(ParentWindow):
         """Update the parameter server with new parameter object values."""
         uri = ws_uri()
         async with websockets.connect(uri) as websocket:
-            await websocket.send(json.dumps({'type': 'set_parameters', 'parameters': json.dumps(self._parameters)}))
+            await websocket.send(json.dumps({'type': 'set_parameters', 'parameters': json.dumps(self.abbreviated_parameters)}))
             
     async def updatePServerTask(self):
         """Update the parameter server with new task name."""
@@ -418,6 +418,15 @@ class ParametersParentWindow(ParentWindow):
             return
         filename = self.name
         f = open(filename, 'wt')
+        out = self.formatParameters()
+        self._parameters.update(**data)
+        json.dump(out, f, indent=2)
+        self.ready = check_for_file(filename)
+        if self.ready:
+            print("Save successful!")
+
+    def formatParameters(self) -> dict:
+        """Return formatted/consolidated parameters dict object."""
         out = dict(parameters=[])
         data = {}
         for k in self.parameters:
@@ -425,11 +434,7 @@ class ParametersParentWindow(ParentWindow):
             out['parameters'].append(data[k])
         out['layout'] = self._layout_file
         out['icon'] = self._icon_file
-        self._parameters.update(**data)
-        json.dump(out, f, indent=2)
-        self.ready = check_for_file(filename)
-        if self.ready:
-            print("Save successful!")
+        return out
 
     def getParameter(self, name: str) -> dict:
         """Return the dynamic parameter object by name and type.
@@ -471,6 +476,20 @@ class ParametersParentWindow(ParentWindow):
         :rtype: None
         """
         self._parameters[k]['PageIndex'] = idx
+
+    @property
+    def abbreviated_parameters(self) -> dict or None:
+        """Parameters property holds minimal parameter-related information.
+
+        :returns: Abbreviated parameters dict
+        :rtype: dict or None
+        """
+        parameters = {}
+        if self.task is not None:
+            for (k, v) in self._parameters.items():
+                if self.task in v['Task']:
+                    parameters[k] = v['Value']
+        return parameters
 
     @property
     def parameters(self) -> dict or None:
