@@ -22,6 +22,13 @@ def parameters_event():
         p = json.dumps({"type": "parameters", "has_data": True, "parameters": json.dumps(STATE['parameters'])})
     return p
 
+def specific_parameter_event(name):
+    if STATE['parameters'] is None:
+        p = json.dumps({"type": "iparam", "has_data": False, "value": ""})
+    else:
+        p = json.dumps({"type": "iparam", "has_data": True, "value": json.dumps(STATE['parameters'][name])})
+    return p
+
 def task_event():
     if STATE['task'] is None:
         p = json.dumps({"type": "task", "has_data": False, "task": ""})
@@ -32,12 +39,15 @@ def task_event():
 def users_event():
     return json.dumps({"type": "users", "count": len(USERS)})
 
-
 async def notify_parameters():
     if USERS:  # asyncio.wait doesn't accept an empty list
         message = parameters_event()
         await asyncio.wait([user.send(message) for user in USERS])
 
+async def notify_specific_parameter(name):
+    if USERS:
+        message = specific_parameter_event(name)
+        await asyncio.wait([user.send(message) for user in USERS])
 
 async def notify_task():
     if USERS:  # asyncio.wait doesn't accept an empty list
@@ -74,6 +84,9 @@ async def serve_parameters(websocket, path):
             elif data["type"] == "set_task":
                 STATE["task"] = data["task"]
                 await notify_task()
+                await notify_parameters()
+            elif data["type"] == "get_parameter":
+                await notify_specific_parameter(data["name"])
     except Exception:
         print("Websocket connection closed.")
     finally:

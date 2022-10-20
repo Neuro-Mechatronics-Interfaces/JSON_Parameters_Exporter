@@ -287,13 +287,29 @@ class ParametersParentWindow(ParentWindow):
         """Update the parameter server with new parameter object values."""
         uri = ws_uri()
         async with websockets.connect(uri) as websocket:
-            await websocket.send(json.dumps({'type': 'set_parameters', 'parameters': json.dumps(self.abbreviated_parameters)}))
+            await websocket.send(json.dumps({'type': 'set_parameters', 'parameters': json.dumps(self._parameters)}))
             
     async def updatePServerTask(self):
         """Update the parameter server with new task name."""
         uri = ws_uri()
         async with websockets.connect(uri) as websocket:
             await websocket.send(json.dumps({'type': 'set_task', 'task': self.task}))
+            data = json.loads(await websocket.recv())
+            while not (data["type"] == "parameters"):
+                data = json.loads(await websocket.recv())
+            if data['has_data'] == True:
+                p = json.loads(data['parameters'])
+                for (k,v) in p.items():
+                    if k in self._parameters.keys():
+                        self._parameters[k] = {}
+                    self._parameters[k] = v
+                self._dropTabs()
+                self._loadLayout(self._parameters)
+                for p in self.pgs:
+                    # print(f'Loading {p.title} parameters...')
+                    p.loadParameters(self._parameters)
+            else:
+                print("Parameters not yet initialized.")
 
     def updateParameter(self, p):
         """Callback for updating a given parameter based on widget changes."""

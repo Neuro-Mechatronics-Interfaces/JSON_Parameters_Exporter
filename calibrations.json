@@ -1,0 +1,44 @@
+{
+  "SUP": {
+    "x_in": 1858901262,
+    "y_in": 1564175184,
+    "top_in": 2123859234,
+    "bottom_in": 1004491135,
+    "left_in": 2315532670,
+    "right_in": 1402269855,
+    "x_out": 514,
+    "y_out": 384,
+    "top_out": 10,
+    "bottom_out": 758,
+    "left_out": 10,
+    "right_out": 1014
+  },
+  "PRO": {
+    "x_in": 2072796500,
+    "y_in": 2308635656,
+    "top_in": 378850905,
+    "bottom_in": 4238420408,
+    "left_in": 60178039,
+    "right_in": 4085414962,
+    "x_out": 514,
+    "y_out": 384,
+    "top_out": 10,
+    "bottom_out": 758,
+    "left_out": 10,
+    "right_out": 1014
+  },
+  "MID": {
+    "x_in": 1094669111,
+    "y_in": 1459840434,
+    "top_in": 1970427813,
+    "bottom_in": 949253054,
+    "left_in": 775736296,
+    "right_in": 1413601926,
+    "x_out": 514,
+    "y_out": 384,
+    "top_out": 10,
+    "bottom_out": 758,
+    "left_out": 10,
+    "right_out": 1014
+  }
+}
